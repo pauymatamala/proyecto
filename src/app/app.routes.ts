@@ -12,6 +12,22 @@ export const routes: Routes = [
   },
   {
     path: 'access',
-    loadComponent: () => import('./access/access.page').then( m => m.AccessPage)
+    loadComponent: () => import('./access/access.page').then(m => m.AccessPage)
   },
+  {
+    path: 'juegos',
+    loadComponent: () => import('./juegos/juegos.page').then(m => m.JuegosPage)
+  },
+  {
+    path: 'ayuda',
+    loadComponent: () => import('./ayuda/ayuda.page').then(m => m.AyudaPage)
+  },
+  {
+    path: 'configuracion',
+    loadComponent: () => import('./configuracion/configuracion.page').then(m => m.ConfiguracionPage)
+  },
+  {
+    path: 'perfil',
+    loadComponent: () => import('./perfil/perfil.page').then(m => m.PerfilPage)
+  }
 ];

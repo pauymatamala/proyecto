@@ -1,13 +1,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>access</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">access</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="cuadro">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input
+          formControlName="usuario"
+          type="text"
+          maxlength="8"
+          minlength="3"
+          required
+          autocomplete="off"
+        ></ion-input>
+      </ion-item>
+      <ion-note color="danger" *ngIf="loginForm.get('usuario')?.invalid && loginForm.get('usuario')?.touched">
+        El usuario debe tener entre 3 y 8 caracteres alfanuméricos.
+      </ion-note>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input
+          formControlName="contrasena"
+          type="password"
+          maxlength="4"
+          minlength="4"
+          required
+          inputmode="numeric"
+          pattern="[0-9]*"
+        ></ion-input>
+      </ion-item>
+      <ion-note color="danger" *ngIf="loginForm.get('contrasena')?.invalid && loginForm.get('contrasena')?.touched">
+        La contraseña debe ser numérica y de 4 dígitos.
+      </ion-note>
+
+      <ion-button expand="block" type="submit" [disabled]="loginForm.invalid">
+        Ingresar
+      </ion-button>
+    </form>
+  </div>
 </ion-content>

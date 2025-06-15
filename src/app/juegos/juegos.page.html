@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Juegos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Explora y disfruta tus juegos favoritos</h2>
+  <p>
+    Aquí puedes descubrir, agregar y gestionar tus videojuegos preferidos. ¡Diviértete explorando nuevas aventuras!
+  </p>
+
+  <ion-card>
+    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="Juego destacado"/>
+    <ion-card-header>
+      <ion-card-title>Juego Destacado: Aventura Épica</ion-card-title>
+      <ion-card-subtitle>Acción / Aventura</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Sumérgete en un mundo lleno de desafíos, enemigos y tesoros ocultos. ¿Estás listo para la aventura?
+      <ion-button expand="block" color="primary" style="margin-top: 12px;">Jugar ahora</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Mis Juegos</ion-label>
+      <ion-button fill="clear" size="small" color="secondary" slot="end">Agregar juego</ion-button>
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=64&q=80" alt="Juego 1"/>
+      </ion-avatar>
+      <ion-label>
+        <h3>Super Carrera</h3>
+        <p>Deportes / Carreras</p>
+      </ion-label>
+      <ion-button fill="outline" size="small" color="success" slot="end">Jugar</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=64&q=80" alt="Juego 2"/>
+      </ion-avatar>
+      <ion-label>
+        <h3>Reinos Mágicos</h3>
+        <p>Rol / Fantasía</p>
+      </ion-label>
+      <ion-button fill="outline" size="small" color="success" slot="end">Jugar</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=64&q=80" alt="Juego 3"/>
+      </ion-avatar>
+      <ion-label>
+        <h3>Batalla Espacial</h3>
+        <p>Acción / Ciencia Ficción</p>
+      </ion-label>
+      <ion-button fill="outline" size="small" color="success" slot="end">Jugar</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-card color="light" style="margin-top: 32px;">
+    <ion-card-header>
+      <ion-card-title>¿No encuentras tu juego?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Puedes agregar nuevos juegos a tu colección y compartirlos con tus amigos.
+      <ion-button expand="block" color="secondary" style="margin-top: 12px;">Agregar nuevo juego</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

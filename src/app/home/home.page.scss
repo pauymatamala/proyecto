@@ -1,11 +1,9 @@
 #container {
   text-align: center;
+  margin-top: 24px; /* Ajusta este valor según lo que necesites */
+  position: static; /* Quita el centrado absoluto */
+  transform: none;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #container strong {
@@ -16,12 +14,57 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+/* filepath: src/app/home/home.page.scss */
+.animar {
+  animation: mover 1s linear;
+}
+
+@keyframes mover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100px); }
+}
+
+.animar-titulo {
+  animation: mover-titulo 1s linear;
+}
+@keyframes mover-titulo {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100px); }
+}
+
+.subtitulo-izquierda {
+  text-align: left;
+  margin-left: 16px;
+}
+.botones-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.botones-row ion-button {
+  flex: 1;
+  min-width: 120px; /* Puedes ajustar este valor */
+}
+.cuadro {
+  border: 2px solid #ccc;      /* Borde gris claro */        /* Bordes redondeados */
+  padding: 32px 24px;          /* Espaciado interno */
+  max-width: 1500px;            /* Ancho máximo */
+  margin: 0 auto;              /* Centrado horizontal */
+  background: transparent;     /* Fondo transparente (por defecto) */
+}
+.navegacion ion-button {
+  flex: 1;
+  min-width: 100px;
+  margin-bottom: 0;
+}
+.navegacion {
+  margin-bottom: 0;
 }
