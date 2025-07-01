@@ -11,6 +11,7 @@ import {
   IonLabel,
   IonNote
 } from '@ionic/angular/standalone';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-ayuda',
@@ -27,7 +28,8 @@ import {
     IonLabel,
     IonNote,
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class AyudaPage implements OnInit {

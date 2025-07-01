@@ -1,0 +1,10 @@
+.botones-horizontales {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.botones-horizontales ion-button {
+  flex: 1;
+  margin-top: 0 !important; /* Elimina el margin-top individual */
+}

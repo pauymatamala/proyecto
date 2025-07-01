@@ -18,6 +18,7 @@ import {
   IonButton
 } from '@ionic/angular/standalone';
 import { UsuarioService } from '../services/usuario.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -40,7 +41,8 @@ import { UsuarioService } from '../services/usuario.service';
     IonLabel,
     IonButton,
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class PerfilPage {

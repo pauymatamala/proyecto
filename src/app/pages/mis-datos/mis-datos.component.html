@@ -1,0 +1,28 @@
+<form [formGroup]="homeForm">
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input id="nombreInput" formControlName="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input id="apellidoInput" formControlName="apellido"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nivel de educación</ion-label>
+    <ion-input formControlName="nivel"></ion-input>
+  </ion-item>
+  <ion-item class="fechaNacimiento">
+    <ion-label position="floating">Fecha nacimiento</ion-label>
+    <ion-datetime
+      formControlName="fechaNacimiento"
+      value="2022-04-21T00:00:00"
+      min="2022-03-01T00:00:00"
+      max="2022-05-31T23:59:59"
+      presentation="date">
+    </ion-datetime>
+  </ion-item>
+  <div class="botones-row">
+    <ion-button color="medium" (click)="limpiar()" type="button">Limpiar</ion-button>
+    <ion-button color="primary" (click)="mostrar()" type="button">Mostrar</ion-button>
+  </div>
+</form>

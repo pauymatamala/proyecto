@@ -1,0 +1,22 @@
+<form [formGroup]="certForm">
+  <ion-item>
+    <ion-label position="floating">Nombre Certificado</ion-label>
+    <ion-input formControlName="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Fecha de Obtención</ion-label>
+    <ion-datetime formControlName="fechaObtencion" presentation="date"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>¿Tiene vencimiento?</ion-label>
+    <ion-checkbox slot="end" formControlName="vence"></ion-checkbox>
+  </ion-item>
+  <ion-item *ngIf="certForm.value.vence">
+    <ion-label position="floating">Fecha de Vencimiento</ion-label>
+    <ion-datetime formControlName="fechaVencimiento" presentation="date"></ion-datetime>
+  </ion-item>
+  <div class="botones-row">
+    <ion-button color="primary" (click)="guardar()" type="button">Guardar</ion-button>
+    <ion-button color="medium" (click)="certForm.reset()" type="button">Limpiar</ion-button>
+  </div>
+</form>

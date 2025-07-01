@@ -1,47 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>SkeletonAPP</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content class="ion-padding">
-  <div id="container">
-    <div class="cuadro">
-      <h2 [class.animar-titulo]="animarTitulo">Bienvenido!</h2>
-      <h6 class="subtitulo-izquierda">usuario: {{ usuario }}</h6>
-      <form [formGroup]="homeForm">
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input id="nombreInput" formControlName="nombre"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Apellido</ion-label>
-          <ion-input id="apellidoInput" formControlName="apellido"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Nivel de educación</ion-label>
-          <ion-input formControlName="nivel"></ion-input>
-        </ion-item>
-        <ion-item>
-          <mat-form-field appearance="fill" style="width: 100%;">
-            <mat-label>Fecha nacimiento</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-        </ion-item>
-        <div class="botones-row">
-          <ion-button color="medium" (click)="limpiar()" type="button">Limpiar</ion-button>
-          <ion-button color="primary" (click)="mostrar()" type="button">Mostrar</ion-button>
-        </div>
-      </form>
-      <hr style="margin: 32px 0 24px 0; border: none; border-top: 1px solid #eee;">
-      <div class="botones-row navegacion">
-        <ion-button routerLink="/perfil" color="secondary">Perfil</ion-button>
-        <ion-button routerLink="/configuracion" color="secondary">Configuración</ion-button>
-        <ion-button routerLink="/ayuda" color="secondary">Ayuda</ion-button>
-        <ion-button routerLink="/juegos" color="secondary">Juegos</ion-button>
-        <ion-button routerLink="/access" color="danger">Cerrar sesión</ion-button>
-      </div>
+<div id="container">
+  <div class="cuadro">
+    <ion-segment [(ngModel)]="segmentValue">
+      <ion-segment-button value="mis-datos">
+        <ion-label>Mis Datos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="experiencia">
+        <ion-label>Experiencia Laboral</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="certificaciones">
+        <ion-label>Certificaciones</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="segmentValue">
+      <app-mis-datos *ngSwitchCase="'mis-datos'"></app-mis-datos>
+      <app-experiencia-laboral *ngSwitchCase="'experiencia'"></app-experiencia-laboral>
+      <app-certificaciones *ngSwitchCase="'certificaciones'"></app-certificaciones>
     </div>
   </div>
-</ion-content>
+</div>

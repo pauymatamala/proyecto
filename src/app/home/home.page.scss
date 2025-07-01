@@ -68,3 +68,18 @@
 .navegacion {
   margin-bottom: 0;
 }
+.fechaNacimiento ion-datetime {
+  --background: #1976d2 !important;
+  --ion-background-color: #1976d2 !important;
+  background: #1976d2 !important;
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+/* Para el campo interno del datetime */
+.fechaNacimiento ion-datetime::part(native-input) {
+  background: #1976d2 !important;
+  color: #fff !important;
+  border-radius: 8px;
+}

@@ -14,6 +14,7 @@ import {
   IonSelectOption,
   IonButton
 } from '@ionic/angular/standalone';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-configuracion',
@@ -33,7 +34,8 @@ import {
     IonSelectOption,
     IonButton,
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class ConfiguracionPage implements OnInit {

@@ -44,7 +44,10 @@
           </ion-label>
         </ion-item>
       </ion-list>
-      <ion-button expand="block" color="primary" style="margin-top: 16px;">Editar perfil</ion-button>
+      <div class=" botones-horizontales">
+        <ion-button expand="block" color="primary" >Editar perfil</ion-button>
+        <ion-button [routerLink]="['/home']" color="primary">Volver</ion-button>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>
